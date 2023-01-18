@@ -4,12 +4,13 @@ import { FaEnvira } from "react-icons/fa";
 import { BsGearFill } from "react-icons/bs";
 import { HiClipboardDocumentList } from "react-icons/hi2";
 import { GiChemicalDrop, GiNuclearWaste, GiChemicalBolt } from "react-icons/gi";
+import {RiServiceLine} from "react-icons/ri"
 
 const Services = () => {
   return (
     <div className="pb-10 px-10">
       <h1 className="text-center text-xl font-bold">Layanan Kami</h1>
-      <div className="grid md:grid-rows-2 sm:grid-rows-3 sm:grid-flow-col justify-center grid-flow-row gap-4 mt-8">
+      <div className="grid md:grid-rows-3 sm:grid-rows-3 sm:grid-flow-col justify-center grid-flow-row gap-4 mt-8">
         <ServiceCard
           title="AMDAL / UKL-UPL"
           subtitle="Analisis Mengenai Dampak Lingkungan untuk mengidentifikasi dampak besar dari pembangunan"
@@ -44,6 +45,11 @@ const Services = () => {
           title="PERTEK Andalalin"
           subtitle="Persetujuan Pembuangan Air Limbah dengan Cara Injeksi menjadi Persetujuan Teknis Pembuangan/Pemanfaatan Air Limbah ke Formasi Tertentu dan Ke Badan Air Permukaan"
           Icon={<GiNuclearWaste size={35} />}
+          />
+        <ServiceCard
+          title="Konsultasi"
+          subtitle="Kami memberikan layanan konsultasi untuk kemudahan pengurusan dokumen"
+          Icon={<RiServiceLine size={35} />}
           />
           </div>
     </div>
