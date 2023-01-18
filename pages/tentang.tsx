@@ -118,25 +118,10 @@ const AboutUs = () => {
           <img
             alt="Pertamina Power"
             className="h-[90px] mx-auto md:mx-0"
-            src="/assets/images/pajak.png"
+            src="/assets/images/Pajak.png"
             height={25}
             width={100}
           />
-          <div className="flex flex-col gap-5" >
-            <div className="flex flex-col md:text-start text-center" >
-              <p className="font-semibold text-secondary" >
-              NOMOR POKOK WAJIB PAJAK
-              </p>
-              <span>Nomor: 75.060.957.0-124.000</span>
-            </div>
-            <div className="flex flex-col md:text-start text-center" >
-              <p className="font-semibold text-secondary" >
-              Surat Pengukuhan Pengusaha Kena Pajak
-              </p>
-              <span>Nomor: 5, 08 Juli 2015</span>
-              <span>Nomor: S-56PKP/WPJ.01/KP.0803/2018</span>
-            </div>
-            </div>
           </div>            
           </div>
           <Form/>

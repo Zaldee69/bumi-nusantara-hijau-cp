@@ -12,7 +12,7 @@ const About = () => {
       <div className="flex-1"  >
         <AboutTypography
           boldText="PT. Bumi Nusantara hijau"
-          normalText="didirikan sebagai wadah para profesional dibidang lingkungan hidup, perencanaan dan manajemen dalam mendukung pelaksanaan pembangunan yang berwawasan lingkungan dan berkelanjutan. dan kami bisa melayani konsultasi perizinan di seluruh Indonesia"
+          normalText="didirikan sebagai wadah para profesional dibidang lingkungan hidup, perencanaan dan manajemen dalam mendukung pelaksanaan pembangunan yang berwawasan lingkungan dan berkelanjutan. serta dapat melayani konsultasi perizinan di seluruh Indonesia"
         />
         <AboutTypography
           boldText="PT. Bumi Nusantara hijau"
@@ -33,12 +33,12 @@ const About = () => {
         <Advantage
           Icon={<TbFileCertificate className="mt-1" size={35} />}
           title="Tenaga Ahli BERSERTIFIKAT KOMPETENSI"
-          subtitle="Tenaga ahli penyusun dokumen AMDAL dan penyusun dokumen PERTEK memiliki sertifikat kompetensi."
+          subtitle="Tenaga Ahli penyusunan dokumen AMDAL dan dokumen Kajian Teknis (PERTEK) telah memiliki sertifikat kompetensi."
         />
         <Advantage
           Icon={<MdOutlineSpeed className="mt-1" size={35} />}
-          title="Waktu Penyusunan SINGKAT"
-          subtitle="Tenaga Ahli berkolaborasi dalam penyusunan dokumen sehingga waktu penyusunan menjadi singkat."
+          title="Penyusunan Efektif dan Efisien"
+          subtitle="Tenaga Ahli berkolaborasi dan aktif berkoordinasi dengan instansi Pemerintah terkait dalam penyusunan dokumen atau perizinan sehingga output penyusunan tepat dan waktu penyusunan lebih terukur."
         />
       </div>
     </div>

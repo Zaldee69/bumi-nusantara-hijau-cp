@@ -31,19 +31,28 @@ const Navbar = () => {
               <LinkTo title="Beranda" href="/" />
             </li>
             <li>
-              <LinkTo title="Tentang Kami" href="/tentang-kami" />
+              <LinkTo title="Tentang Kami" href="/tentang" />
             </li>
             <li>
-              <LinkTo title="Kontak Kami" href="/kontak-kami" />
+              <LinkTo title="Kontak Kami" href="/kontak" />
             </li>
             <li>
               <LinkTo title="AMDAL" href="/amdal" />
             </li>
             <li>
-              <LinkTo title="PERTEK" href="/pertek" />
+              <LinkTo title="PERTEK B3" href="/pertek-b3" />
             </li>
             <li>
-              <LinkTo title="Design Engineering" href="/design-engineering" />
+              <LinkTo title="PERTEK Emisi" href="/pertek/emisi" />
+            </li>
+            <li>
+              <LinkTo title="PERTEK Air Limbah" href="/pertek/limbah" />
+            </li>
+            <li>
+              <LinkTo title="Design Engineering" href="/de" />
+            </li>
+            <li>
+              <LinkTo title="Feasebility Study" href="/fs" />
             </li>
           </ul>
         </div>

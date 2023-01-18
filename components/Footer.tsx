@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -8,24 +9,41 @@ const Footer = () => {
           PT. BUMI NUSANTARA HIJAU
         </span>
         <a className="text-white">
-          Didirikan sebagai wadah para profesional <br /> dibidang lingkungan hidup,
-           perencanaan dan <br /> manajemen dalam mendukung pelaksanaan <br />
+          Didirikan sebagai wadah para profesional <br /> dibidang lingkungan
+          hidup, perencanaan da <br /> manajemen dalam mendukung pelaksanaan{" "}
+          <br />
           pembangunan yang berwawasan lingkungan <br /> dan berkelanjutan.
         </a>
       </div>
       <div>
         <span className="footer-title">Tentang Kami</span>
-        <a className="link link-hover">Tentang PT. BPN</a>
-        <a className="link link-hover">Kontak</a>
+        <Link href="/tentang">
+          <p className="link link-hover">Tentang PT. BPN</p>
+        </Link>
+        <Link href="/kontak">
+          <p className="link link-hover">Kontak</p>
+        </Link>
       </div>
       <div>
         <span className="footer-title">Layanan</span>
-        <a className="link link-hover">AMDAL</a>
-        <a className="link link-hover">Design Engineering</a>
-        <a className="link link-hover">Feasebility Study</a>
-        <a className="link link-hover">PERTEK Pemanfaatan Air Limbah</a>
-        <a className="link link-hover">PERTEK Pembuangan Emisi</a>
-        <a className="link link-hover">PERTEK Pembuangan Air Limbah ke laut</a>
+        <Link href="/amdal">
+          <p className="link link-hover">AMDAL</p>
+        </Link>
+        <Link href="/de">
+          <p className="link link-hover">Design Engineering</p>
+        </Link>
+        <Link href="/fe">
+          <p className="link link-hover">Feasebility Study</p>
+        </Link>
+        <Link href="/pertek/b3">
+          <p className="link link-hover">PERTEK B3</p>
+        </Link>
+        <Link href="/pertek/emisi">
+          <p className="link link-hover">PERTEK Emisi</p>
+        </Link>
+        <Link href="pertek/limbah">
+          <p className="link link-hover">PERTEK Air Limbah</p>
+        </Link>
       </div>
       <div>
         <span className="footer-title">Hubungi Kami</span>
@@ -42,3 +60,16 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+const Footerris = () => {
+  return (
+    <div className="J" >
+      J. Asrama Komplek Bumi Asri Blok C No. 27-28, <br/> Medan,
+      Sumatera Utara 20126 <br/>
+      Phone: 0822536554721
+    </div>
+  )
+}
+ 

@@ -18,7 +18,7 @@ const Advantages = () => {
         <Advantage
           Icon={<HiOutlineDocumentText className="mt-1" size={35} />}
           title="Perizinan"
-          subtitle="Kami membantu melengkapi Izin Lingkungan supaya terlindungi hukum dengan maksimal."
+          subtitle="Kami membantu melengkapi perizinan terkait lingkungan hidup supaya terlindungi hukum dengan maksimal."
           style="text-white"
         />
         <Advantage

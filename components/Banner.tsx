@@ -8,14 +8,14 @@ const Banner = () => {
       <div>
         <h1 className="md:text-3xl text-xl font-bold" >
           #UrusIzinJadiMudah <br />
-          KONSULTASI ONLINE
+          KONSULTASI ONLINE (Via WhatsApp)
         </h1>
         <p>
-          Konsultasi nyaman dan cepat.<br /> Hubungi Tenaga Ahli kami kapan saja
+          Konsultasi nyaman dan cepat.<br /> Hubungi Kami kapan saja
           ketika anda bingung <br /> mengurus Dokumen Lingkungan hidup.
         </p>
         <Button
-          title="Tentang Kami"
+          title="Konsultasi Sekarang"
           style="bg-secondary text-white px-4 py-2 rounded-lg mt-4 text-sm"
         />
       </div>
