@@ -11,11 +11,11 @@ const About = () => {
     <div className="flex md:px-32 flex-col md:flex-row px-10 gap-10 py-10" >
       <div className="flex-1"  >
         <AboutTypography
-          boldText="PT. Bumi Nusantara hijau"
+          boldText="PT Bumi Nusantara hijau"
           normalText="didirikan sebagai wadah para profesional dibidang lingkungan hidup, perencanaan dan manajemen dalam mendukung pelaksanaan pembangunan yang berwawasan lingkungan dan berkelanjutan. serta dapat melayani konsultasi perizinan di seluruh Indonesia"
         />
         <AboutTypography
-          boldText="PT. Bumi Nusantara hijau"
+          boldText="PT Bumi Nusantara hijau"
           normalText="terbuka untuk bekerjasama dengan pemerintah dan swasta serta meyediakan tenaga ahli yang profesional pada bidangnya masing-masing"
           style="mt-7"
         />

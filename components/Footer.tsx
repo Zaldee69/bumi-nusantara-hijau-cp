@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer p-10 bg-neutral text-neutral-content">
       <div>
         <span className="text-white font-semibold text-xl">
-          PT. BUMI NUSANTARA HIJAU
+          PT BUMI NUSANTARA HIJAU
         </span>
         <a className="text-white">
           Didirikan sebagai wadah para profesional <br /> dibidang lingkungan
@@ -18,7 +18,7 @@ const Footer = () => {
       <div>
         <span className="footer-title">Tentang Kami</span>
         <Link href="/tentang">
-          <p className="link link-hover">Tentang PT. BPN</p>
+          <p className="link link-hover">Tentang PT BNH</p>
         </Link>
         <Link href="/kontak">
           <p className="link link-hover">Kontak</p>
@@ -27,7 +27,7 @@ const Footer = () => {
       <div>
         <span className="footer-title">Layanan</span>
         <Link href="/amdal">
-          <p className="link link-hover">AMDAL</p>
+          <p className="link link-hover">AMDAL / UKL-UPL</p>
         </Link>
         <Link href="/de">
           <p className="link link-hover">Design Engineering</p>
@@ -35,14 +35,17 @@ const Footer = () => {
         <Link href="/fe">
           <p className="link link-hover">Feasebility Study</p>
         </Link>
-        <Link href="/pertek/b3">
-          <p className="link link-hover">PERTEK B3</p>
+        <Link href="/pertek/lb3">
+          <p className="link link-hover">PERTEK LB3</p>
         </Link>
         <Link href="/pertek/emisi">
           <p className="link link-hover">PERTEK Emisi</p>
         </Link>
         <Link href="pertek/limbah">
           <p className="link link-hover">PERTEK Air Limbah</p>
+        </Link>
+        <Link href="pertek/andalalin">
+          <p className="link link-hover">PERTEK Andalalin</p>
         </Link>
       </div>
       <div>

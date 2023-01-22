@@ -13,7 +13,7 @@ const Amdal = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Templates>
-      <main className="bg-[#F8F9FA] py-10 pt-16 md:px-32" >
+      <main className="bg-[#F8F9FA] p-10 pt-16 md:px-32" >
         <div>
             <h1 className="md:text-2xl font-bold text-xl mb-2" >Pengurusan AMDAL / UKL-UPL </h1>
             <p>Analisis Mengenai Dampak Lingkungan atau AMDAL / UKL-UPL adalah kajian mengenai dampak besar penting dari suatu usaha kegiatan/ pembangunan yang direncanakan pada lingkungan hidup yang diperlukan bagi proses pengambilan keputusan tentang penyelenggaraan Pembangunan atau kegiatan di Indonesia.</p>

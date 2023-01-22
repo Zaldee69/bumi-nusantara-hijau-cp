@@ -36,6 +36,11 @@ const Services = () => {
           subtitle="Persetujuan teknis baku mutu limbah B3 adalah kajian tentang limbah B3 dan kajian tempat penyimpanan sementara limbah B3 yang merupakan persyaratanpemenuhan untuk AMDAL dan UKL UPL."
           Icon={<GiChemicalDrop size={35} />}
           />
+          <ServiceCard
+          title="Konsultasi"
+          subtitle="Kami memberikan layanan konsultasi untuk kemudahan pengurusan dokumen"
+          Icon={<RiServiceLine size={35} />}
+          />
         <ServiceCard
           title="PERTEK Air Limbah"
           subtitle="Persetujuan Pembuangan Air Limbah dengan Cara Injeksi menjadi Persetujuan Teknis Pembuangan/Pemanfaatan Air Limbah ke Formasi Tertentu dan Ke Badan Air Permukaan"
@@ -45,11 +50,6 @@ const Services = () => {
           title="PERTEK Andalalin"
           subtitle="Persetujuan Pembuangan Air Limbah dengan Cara Injeksi menjadi Persetujuan Teknis Pembuangan/Pemanfaatan Air Limbah ke Formasi Tertentu dan Ke Badan Air Permukaan"
           Icon={<GiNuclearWaste size={35} />}
-          />
-        <ServiceCard
-          title="Konsultasi"
-          subtitle="Kami memberikan layanan konsultasi untuk kemudahan pengurusan dokumen"
-          Icon={<RiServiceLine size={35} />}
           />
           </div>
     </div>

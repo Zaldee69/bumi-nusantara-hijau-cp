@@ -37,7 +37,7 @@ const AboutUs = () => {
             </div>
             </div>
           </div>  
-          <div className="flex flex-col md:flex-row gap-4 mt-12 items-start px-10" >
+          <div className="flex flex-col justify-center md:flex-row gap-4 mt-12 md:items-start px-10" >
           <div className="flex flex-1 flex-col gap-5 items-center " >
           <img
             alt="Pertamina Power"
@@ -95,7 +95,7 @@ const AboutUs = () => {
           <div className="flex flex-col flex-1 gap-5 items-center " >
           <img
             alt="Pertamina Power"
-            className="h-[90px] mx-auto md:mx-0"
+            className="h-[110px] md:h-[90px] mx-auto md:mx-0"
             src="/assets/images/Menkumham.png"
             height={25}
             width={100}
