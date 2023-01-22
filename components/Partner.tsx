@@ -5,8 +5,7 @@ const Partner = () => {
   return (
     <div className="bg-white py-10 px-10">
       <h1 className="text-center text-xl">
-        Telah dipercaya lebih dari <span className="font-semibold">20+</span>{" "}
-        perusahaan
+        Telah dipercaya berbagai perusahaan dan insatansai pemerintahan
       </h1>
       <div className="grid md:grid-rows-1 sm:grid-rows-2 sm:grid-flow-col justify-center grid-flow-row gap-7 items-center px-10 py-10" >
           <Image
