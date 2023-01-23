@@ -3,7 +3,7 @@ import React from "react";
 interface Props {
   title: string;
   style: string;
-  action?: () => void;
+  action?: any;
 }
 
 const Button = ({ title, style, action }: Props) => {

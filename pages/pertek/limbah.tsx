@@ -2,8 +2,12 @@ import React from "react";
 import Head from "next/head";
 import { Templates } from "../../templates/Templates";
 import Button from "../../atoms/Button";
+import {useRouter} from "next/router"
 
 const Index = () => {
+
+  const router = useRouter()
+
   return (
     <>
     <Head>
@@ -27,7 +31,7 @@ const Index = () => {
           <ul className="mt-2">
             <li>1. Kajian Teknis Air Limbah.</li>
           </ul>
-          <Button title="Konsultasi Sekarang" style="bg-secondary text-white mt-5 px-5 py-3 rounded-lg" />
+          <Button action={() => router.push("/konsultasi")} title="Konsultasi Sekarang" style="bg-secondary text-white mt-5 px-5 py-3 rounded-lg" />
         </div>
       </main>
     </Templates>

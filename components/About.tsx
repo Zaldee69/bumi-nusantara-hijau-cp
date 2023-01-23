@@ -5,8 +5,10 @@ import Button from "../atoms/Button";
 import {RiServiceLine} from "react-icons/ri"
 import {TbFileCertificate} from "react-icons/tb"
 import {MdOutlineSpeed} from "react-icons/md"
+import {useRouter} from "next/router"
 
 const About = () => {
+  const router = useRouter()
   return (
     <div className="flex md:px-32 flex-col md:flex-row px-10 gap-10 py-10" >
       <div className="flex-1"  >
@@ -20,6 +22,7 @@ const About = () => {
           style="mt-7"
         />
         <Button
+          action={() => router.push("/tentang")}
           title="Tentang Kami"
           style="bg-secondary text-white px-4 py-2 rounded-lg mt-4 text-sm"
         />

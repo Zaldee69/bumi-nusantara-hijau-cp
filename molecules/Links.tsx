@@ -36,7 +36,7 @@ const Links = () => {
         <LinkTo title="Kontak" href="/kontak" style={`group-hover:font-medium ${router.pathname === '/kontak' && "font-medium"}`} />
       </li>
       <li className="mx-5" >
-        <Button title="Konsultasi Sekarang" style="bg-secondary text-white text-sm" />
+        <Button action={() => router.push("/konsultasi")} title="Konsultasi Sekarang" style="bg-secondary text-white text-sm" />
       </li>
     </ul>
   );

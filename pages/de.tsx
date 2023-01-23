@@ -2,8 +2,12 @@ import React from "react";
 import Head from "next/head";
 import { Templates } from "../templates/Templates";
 import Button from "../atoms/Button";
+import {useRouter} from "next/router"
 
 const DesignEngineering = () => {
+
+  const router = useRouter()
+
   return (
     <>
     <Head>
@@ -33,7 +37,7 @@ const DesignEngineering = () => {
             <li>6. Legal aspect: Analisis terhadap dokumen dan persetujuan proyek untuk melihat kelayakannya terhadap hukum yang berlaku.</li>
             <li>7. Environment aspect: Dampak yang akan diberikan proyek terhadap lingkungan.</li>
           </ul>
-          <Button title="Konsultasi Sekarang" style="bg-secondary text-white mt-5 px-5 py-3 rounded-lg" />
+          <Button action={() => router.push("/konsultasi")} title="Konsultasi Sekarang" style="bg-secondary text-white mt-5 px-5 py-3 rounded-lg" />
         </div>
       </main>
     </Templates>
