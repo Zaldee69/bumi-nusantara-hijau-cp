@@ -1,12 +1,14 @@
 import React, { useState, ChangeEvent } from "react";
 import Head from "next/head";
 import { Templates } from "../templates/Templates";
+import emailjs from '@emailjs/browser';
+
 
 interface IForm {
   name: string;
-  email?: string;
-  hp: number;
-  method: "1" | "2" | "3" | null;
+  gatau?: string;
+  hp: number | undefined;
+  method: "1" | "2" | "3" | undefined;
   address?: string;
   date: string;
   time: string;
@@ -16,28 +18,55 @@ interface IForm {
 const Konsultasi = () => {
   const [form, setForm] = useState<IForm>({
     name: "",
-    email: "",
-    hp: 0,
-    method: null,
+    gatau: "",
+    hp: undefined,
+    method: undefined,
     address: "",
     date: "",
     time: "",
     tnc: false,
   });
 
+  const [errorMessage, setErrorMessage] = useState<string>("") 
+
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement >) => {
     const {name, value} = e.target as typeof e.target;
+
+    if(name === "method"){
+      setErrorMessage("")
+    }
+
       setForm({
         ...form,
         [name]: name === "tnc" ? (e.target as HTMLInputElement).checked : value
       })
-
-      console.log(form)
-
     };
 
+  const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
 
-  const onSubmitHandler = () => {};
+    const template: any = {...form}
+
+    template.method = template.method === "1" ? "Via Zoom" : template.method === "2" ? "Bertemu langsung di kantor PT BNH" :  template.method === undefined ? "" : "Bertemu di kantor customer"
+
+    if(form.method !== undefined){
+      emailjs.send("service_0ipont3", "template_mxvyngr", template as any , "0U5Va30ezqFBsyZp2" ).then((res) => {
+        setForm({
+          name: "",
+          gatau: "",
+          hp: undefined,
+          method: undefined,
+          address: "",
+          date: "",
+          time: "",
+          tnc: false,
+        })
+      }).catch((err) => console.log(err))
+      
+    }else {
+      setErrorMessage("Silahkan pilih metode konsultasi terlebih dahulu!")
+    }
+  };
 
   return (
     <>
@@ -49,7 +78,7 @@ const Konsultasi = () => {
       </Head>
       <Templates>
         <main className="bg-[#F8F9FA] p-10 pt-16 md:px-32">
-          <form className="flex gap-20 justify-between">
+          <form onSubmit={onSubmitHandler} className="flex gap-20 justify-between">
             {/* left content */}
             <div className="flex-auto w-64">
               <h1 className="md:text-2xl font-bold text-xl mb-2">
@@ -65,18 +94,20 @@ const Konsultasi = () => {
                   type="text"
                   className="bg-transparent border-b border-black w-full outline-none"
                   onChange={onChangeHandler}
+                  value={form.name}
                 />
               </div>
               <div className="flex gap-10">
                 <div className="flex flex-1 flex-col mt-10">
-                  <label htmlFor="email" className="text-black font-medium">
+                  <label htmlFor="gatau" className="text-black font-medium">
                     Email (Opsional)
                   </label>
                   <input
-                    name="email"
-                    type="email"
+                    name="gatau"
+                    type="text"
                     className="bg-transparent border-b border-black w-full outline-none"
                     onChange={onChangeHandler}
+                    value={form.gatau}
                   />
                 </div>
                 <div className="flex flex-1 flex-col mt-10">
@@ -86,9 +117,10 @@ const Konsultasi = () => {
                   <input
                     required
                     name="hp"
-                    type="text"
+                    type="number"
                     className="bg-transparent border-b border-black w-full outline-none"
                     onChange={onChangeHandler}
+                    value={form.hp}
                   />
                 </div>
               </div>
@@ -97,10 +129,10 @@ const Konsultasi = () => {
                   Metode Konsultasi
                 </label>
                 <select
-                  required
                   name="method"
                   className="select w-full mt-3 bg-transparent max-w-xs border-black"
                   onChange={onChangeHandler}
+                  value={form.method}
                 >
                   <option disabled selected>
                     Pilih Metode
@@ -118,6 +150,7 @@ const Konsultasi = () => {
                 </label>
                 <input
                   onChange={onChangeHandler}
+                  value={form.address}
                   name="address"
                   type="text"
                   className="bg-transparent border-b border-black w-full outline-none"
@@ -132,6 +165,7 @@ const Konsultasi = () => {
                   </label>
                   <input
                     onChange={onChangeHandler}
+                    value={form.date}
                     name="date"
                     type="date"
                     className="bg-transparent border-b border-black w-full outline-none"
@@ -144,6 +178,7 @@ const Konsultasi = () => {
                   <input
                     onChange={onChangeHandler}
                     required
+                    value={form.time}
                     name="time"
                     type="time"
                     className="bg-transparent border-b border-black w-full outline-none"
@@ -186,9 +221,10 @@ const Konsultasi = () => {
                   </span>
                 </label>
               </div>
-              <button disabled={form.tnc === false} className="bg-secondary disabled:cursor-not-allowed disabled:opacity-40 text-white px-12 py-3 rounded-lg mt-4">
+              <button type="submit" disabled={form.tnc === false} className="bg-secondary disabled:cursor-not-allowed disabled:opacity-40 text-white px-12 py-3 rounded-lg mt-4">
                 Kirim
               </button>
+              <p className="mt-1 text-red-500 italic text-sm" >{errorMessage}</p>
             </div>
             {/* right content */}
             <div className="hidden md:block flex-auto w-32">

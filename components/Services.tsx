@@ -42,7 +42,7 @@ const Services = () => {
           Icon={<GiChemicalDrop size={35} />}
           />
           <ServiceCard
-          link="/pertek/konsultasi"
+          link="/konsultasi"
           title="Konsultasi"
           subtitle="Kami memberikan layanan konsultasi untuk kemudahan pengurusan dokumen"
           Icon={<RiServiceLine size={35} />}

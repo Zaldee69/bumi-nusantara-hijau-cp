@@ -1,6 +1,7 @@
 import React from "react";
 import LinkTo from "../atoms/Link";
 import Links from "../molecules/Links";
+import Image from "next/image"
 
 const Navbar = () => {
   return (
@@ -56,8 +57,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-
-        {/* <a className="btn btn-ghost normal-case text-xl">PT.BUMI NUSANTARA HIJAU</a> */}
+        <div className="flex gap-3 ml-5 items-center" >
+        <Image className="" alt="logo" src="/assets/images/logo.png" height="100" width="100" />
+        <a className="hidden md:block normal-case text-xl">PT BUMI NUSANTARA HIJAU</a>
+        </div>
       </div>
       <div className="flex-none">
         <Links />

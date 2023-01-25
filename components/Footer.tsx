@@ -10,7 +10,7 @@ const Footer = () => {
         </span>
         <a className="text-white">
           Didirikan sebagai wadah para profesional <br /> dibidang lingkungan
-          hidup, perencanaan da <br /> manajemen dalam mendukung pelaksanaan{" "}
+          hidup, perencanaan dan <br /> manajemen dalam mendukung pelaksanaan{" "}
           <br />
           pembangunan yang berwawasan lingkungan <br /> dan berkelanjutan.
         </a>
