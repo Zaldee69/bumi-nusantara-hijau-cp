@@ -41,11 +41,14 @@ const Footer = () => {
         <Link href="/pertek/emisi">
           <p className="link link-hover">PERTEK Emisi</p>
         </Link>
-        <Link href="pertek/limbah">
+        <Link href="/pertek/limbah">
           <p className="link link-hover">PERTEK Air Limbah</p>
         </Link>
-        <Link href="pertek/andalalin">
+        <Link href="/pertek/andalalin">
           <p className="link link-hover">PERTEK Andalalin</p>
+        </Link>
+        <Link href="/konsultasi">
+          <p className="link link-hover">Konsultasi</p>
         </Link>
       </div>
       <div>
@@ -55,7 +58,7 @@ const Footer = () => {
           Sumatera Utara 20126 <br />
           Phone : 061-8440747, 8466674 <br />
           Fax : 061-8466674 <br />
-          E-Mail : buminusantarahijaupt@gmail.com
+          E-Mail : admin@buminusantarahijau.com
         </a>
       </div>
     </footer>
