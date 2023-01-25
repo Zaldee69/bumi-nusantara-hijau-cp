@@ -25,6 +25,9 @@ const DropdownLinks = () => {
       <li>
         <LinkTo title="Feasebility Study" href="/fs" />
       </li>
+      <li>
+        <LinkTo title="Konsultasi" href="/konsultasi" />
+      </li>
       
     </ul>
   );
