@@ -59,7 +59,7 @@ const Navbar = () => {
         </div>
         <div className="flex gap-3 ml-5 items-center" >
         <Image className="" alt="logo" src="/assets/images/logo.png" height="100" width="100" />
-        <a className="hidden md:block normal-case text-xl">PT BUMI NUSANTARA HIJAU</a>
+        <a className="hidden md:block normal-case text-xl font-semibold">PT BUMI NUSANTARA HIJAU</a>
         </div>
       </div>
       <div className="flex-none">
