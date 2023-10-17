@@ -9,6 +9,7 @@ const Partner = () => {
       </h1>
       <div className="grid md:grid-rows-1 sm:grid-rows-2 sm:grid-flow-col justify-center grid-flow-row gap-7 items-center px-10 py-10" >
           <Image
+            unoptimized={true}
             alt="Pertamina Power"
             className="h-[90px] mx-auto md:mx-0"
             src="/assets/images/nusantara1.png"
@@ -16,6 +17,7 @@ const Partner = () => {
             width={200}
           />
           <Image
+            unoptimized={true}
             alt="Pertamina Power"
             className="h-[100px] mx-auto md:mx-0"
             src="/assets/images/perkebunan2.png"
@@ -23,6 +25,7 @@ const Partner = () => {
             width={150}
           />
           <Image
+            unoptimized={true}
             alt="Pertamina Power"
             className="h-[60px] mx-auto md:mx-0"
             src="/assets/images/aice.jpg"
@@ -30,6 +33,7 @@ const Partner = () => {
             width={150}
           />
           <Image
+            unoptimized={true}
             alt="Pertamina Power"
             className="h-[50px] mx-auto md:mx-0"
             src="/assets/images/pertamina.png"
@@ -37,6 +41,7 @@ const Partner = () => {
             width={150}
           />
           <Image
+            unoptimized={true}
             alt="Pertamina Power"
             className="h-[60px] mx-auto md:mx-0"
             src="/assets/images/sinarmas.png"
@@ -44,6 +49,7 @@ const Partner = () => {
             width={150}
           />
           <Image
+            unoptimized={true}
             alt="Pertamina Power"
             className="h-[70px] mx-auto md:mx-0"
             src="/assets/images/pdam.png"

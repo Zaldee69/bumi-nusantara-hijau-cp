@@ -32,7 +32,7 @@ const Form = () => {
 
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    emailjs.send("service_0ipont3", "template_vh73g0u", form as any , "0U5Va30ezqFBsyZp2" ).then((res) => {
+    emailjs.send("service_rqo9v1d", "template_b9ksjim", form as any , "tELoQHcg3n3RVYGPV" ).then((res) => {
       setForm({
         name: "",
         phone: undefined,

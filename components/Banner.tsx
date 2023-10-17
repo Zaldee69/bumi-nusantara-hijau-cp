@@ -24,7 +24,7 @@ const Banner = () => {
           style="bg-secondary text-white px-4 py-2 rounded-lg mt-4 text-sm"
         />
       </div>
-          <Image className="hidden md:block" src="/assets/images/banner.png" height={500} width={500} alt="phone"/>
+          <Image unoptimized={true} className="hidden md:block" src="/assets/images/banner.png" height={500} width={500} alt="phone"/>
     </div>
   );
 };

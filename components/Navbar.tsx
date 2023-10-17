@@ -6,7 +6,7 @@ import Image from "next/image"
 const Navbar = () => {
   return (
     <nav className="navbar py-5 text-sm bg-transparent">
-      <div className="flex-1">
+      <div className="flex-1 justify-between">
         <div className="dropdown md:hidden">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
             <svg
@@ -58,7 +58,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex gap-3 ml-5 items-center" >
-        <Image className="" alt="logo" src="/assets/images/logo.png" height="100" width="100" />
+        <Image unoptimized={true} className="" alt="logo" src="/assets/images/logo.png" height="100" width="100" />
         <a className="hidden md:block normal-case text-xl font-semibold">PT BUMI NUSANTARA HIJAU</a>
         </div>
       </div>

@@ -6,6 +6,7 @@ module.exports = {
     "./layouts/**/*.{js,ts,jsx,tsx}",
     "./atoms/**/*.{js,ts,jsx,tsx}",
     "./molecules/**/*.{js,ts,jsx,tsx}",
+    "./templates/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
