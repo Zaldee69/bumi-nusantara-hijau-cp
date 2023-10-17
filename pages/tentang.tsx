@@ -86,7 +86,7 @@ const AboutUs = () => {
               <p className="font-semibold text-secondary" >
               ISO 45001:2018 - Occupational Health And Safety Management System
               </p>
-              <span>Nomor: EM-BNH160322250690</span>
+              <span>Nomor: HS-BNH160322250690</span>
             </div>
             </div>
           </div>        

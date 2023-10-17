@@ -29,11 +29,42 @@ const Kontak = () => {
         title="buminusantarahijau@mail.com"
         subtitle="Kamu bisa hubungi via gmail yang akan terhubung dengan admin kami"
       />
-            <Advantage
+            {/* <Advantage
           Icon={<AiOutlinePhone className="mt-1" size={40} />}
           title="+6282253654721"
           subtitle="Kamu bisa hubungi kami via Telephone"
-        />
+        /> */}
+         <div className={`flex items-start gap-5`}>
+              <span>
+                <AiOutlinePhone className="mt-1" size={40} />
+              </span>
+              <div>
+                <p>{"Kamu bisa hubungi kami via Telephone"}</p>
+                <ul>
+                  <li>
+                    <p>
+                      {" "}
+                      <span className="font-bold">1. Ramli Lubis</span> -
+                      +6281361573845
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      {" "}
+                      <span className="font-bold">2. Lintong M.I. Pane</span> -
+                      +628116020707
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      {" "}
+                      <span className="font-bold">3. Rizaldy</span> -
+                      +6282253654721
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
             </div>
             <Form/>
         </main>

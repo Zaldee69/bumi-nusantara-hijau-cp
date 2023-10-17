@@ -54,8 +54,9 @@ const Footer = () => {
       <div>
         <span className="footer-title">Hubungi Kami</span>
         <a className="">
-          Jl. Asrama Komplek Bumi Asri blok C No. 27 - 28, <br /> Medan,
-          Sumatera Utara 20126 <br />
+          Jl. Flamboyan Raya Perumahan Taman Anggrek Setiabudi, <br />
+          Blok Catelia No. 16 Kelurahan Tanjung Selamat, <br />
+          Kecamatan Medan Tuntungan Kota Medan Provinsi Sumatera Utara. <br />
           Phone : 061-8440747, 8466674 <br />
           Fax : 061-8466674 <br />
           E-Mail : admin@buminusantarahijau.com
@@ -67,15 +68,12 @@ const Footer = () => {
 
 export default Footer;
 
-
-
 const Footerris = () => {
   return (
-    <div className="J" >
-      J. Asrama Komplek Bumi Asri Blok C No. 27-28, <br/> Medan,
-      Sumatera Utara 20126 <br/>
+    <div className="J">
+      J. Asrama Komplek Bumi Asri Blok C No. 27-28, <br /> Medan, Sumatera Utara
+      20126 <br />
       Phone: 0822536554721
     </div>
-  )
-}
- 
+  );
+};

@@ -29,6 +29,9 @@ const Links = () => {
         </a>
         <DropdownLinks />
       </li>
+      <li className={`group hover:border-secondary border-b-2 border-transparent ${router.pathname === '/portofolio' && "border-secondary"}`} >
+        <LinkTo title="Portofolio" href="/portofolio" style={`group-hover:font-medium ${router.pathname === '/portofolio' && "font-medium"}`} />
+      </li>
       <li className={`group hover:border-secondary border-b-2 border-transparent ${router.pathname === '/tentang' && "border-secondary"}`} >
         <LinkTo title="Tentang" href="/tentang" style={`group-hover:font-medium ${router.pathname === '/tentang' && "font-medium"}`} />
       </li>
