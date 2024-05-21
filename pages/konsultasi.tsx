@@ -1,8 +1,7 @@
 import React, { useState, ChangeEvent } from "react";
 import Head from "next/head";
 import { Templates } from "../templates/Templates";
-import emailjs from '@emailjs/browser';
-
+import emailjs from "@emailjs/browser";
 
 interface IForm {
   name: string;
@@ -27,44 +26,60 @@ const Konsultasi = () => {
     tnc: false,
   });
 
-  const [errorMessage, setErrorMessage] = useState<string>("") 
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
-  const onChangeHandler = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement >) => {
-    const {name, value} = e.target as typeof e.target;
+  const onChangeHandler = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target as typeof e.target;
 
-    if(name === "method"){
-      setErrorMessage("")
+    if (name === "method") {
+      setErrorMessage("");
     }
 
-      setForm({
-        ...form,
-        [name]: name === "tnc" ? (e.target as HTMLInputElement).checked : value
-      })
-    };
+    setForm({
+      ...form,
+      [name]: name === "tnc" ? (e.target as HTMLInputElement).checked : value,
+    });
+  };
 
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const template: any = {...form}
+    const template: any = { ...form };
 
-    template.method = template.method === "1" ? "Via Zoom" : template.method === "2" ? "Bertemu langsung di kantor PT BNH" :  template.method === undefined ? "" : "Bertemu di kantor customer"
+    template.method =
+      template.method === "1"
+        ? "Via Zoom"
+        : template.method === "2"
+        ? "Bertemu langsung di kantor PT BNH"
+        : template.method === undefined
+        ? ""
+        : "Bertemu di kantor customer";
 
-    if(form.method !== undefined){
-      emailjs.send("service_rqo9v1d", "template_qn7z3gb", template as any , "tELoQHcg3n3RVYGPV" ).then((res) => {
-        setForm({
-          name: "",
-          gatau: "",
-          hp: undefined,
-          method: undefined,
-          address: "",
-          date: "",
-          time: "",
-          tnc: false,
+    if (form.method !== undefined) {
+      emailjs
+        .send(
+          "service_rqo9v1d",
+          "template_qn7z3gb",
+          template as any,
+          "tELoQHcg3n3RVYGPV"
+        )
+        .then((res) => {
+          setForm({
+            name: "",
+            gatau: "",
+            hp: undefined,
+            method: undefined,
+            address: "",
+            date: "",
+            time: "",
+            tnc: false,
+          });
         })
-      }).catch((err) => console.log(err))
-      
-    }else {
-      setErrorMessage("Silahkan pilih metode konsultasi terlebih dahulu!")
+        .catch((err) => console.log(err));
+    } else {
+      setErrorMessage("Silahkan pilih metode konsultasi terlebih dahulu!");
     }
   };
 
@@ -78,7 +93,10 @@ const Konsultasi = () => {
       </Head>
       <Templates>
         <main className="bg-[#F8F9FA] p-10 pt-16 md:px-32">
-          <form onSubmit={onSubmitHandler} className="flex gap-20 justify-between">
+          <form
+            onSubmit={onSubmitHandler}
+            className="flex gap-20 justify-between"
+          >
             {/* left content */}
             <div className="flex-auto w-64">
               <h1 className="md:text-2xl font-bold text-xl mb-2">
@@ -142,22 +160,20 @@ const Konsultasi = () => {
                   <option value="3">Bertemu di kantor customer</option>
                 </select>
               </div>
-              {
-                form.method === "3" && (
-                  <div className="flex flex-1 flex-col mt-10">
-                <label htmlFor="address" className="text-black font-medium">
-                  Alamat Perusahaan
-                </label>
-                <input
-                  onChange={onChangeHandler}
-                  value={form.address}
-                  name="address"
-                  type="text"
-                  className="bg-transparent border-b border-black w-full outline-none"
-                />
-              </div>
-                )
-              }
+              {form.method === "3" && (
+                <div className="flex flex-1 flex-col mt-10">
+                  <label htmlFor="address" className="text-black font-medium">
+                    Alamat Perusahaan
+                  </label>
+                  <input
+                    onChange={onChangeHandler}
+                    value={form.address}
+                    name="address"
+                    type="text"
+                    className="bg-transparent border-b border-black w-full outline-none"
+                  />
+                </div>
+              )}
               <div className="flex gap-10">
                 <div className="flex flex-1 flex-col mt-10">
                   <label htmlFor="date" className="text-black font-medium">
@@ -215,16 +231,26 @@ const Konsultasi = () => {
               </div>
               <div className="form-control mt-5">
                 <label className="label justify-start gap-2 cursor-pointer">
-                  <input checked={form.tnc} onChange={onChangeHandler} type="checkbox" name="tnc" className="checkbox" />
+                  <input
+                    checked={form.tnc}
+                    onChange={onChangeHandler}
+                    type="checkbox"
+                    name="tnc"
+                    className="checkbox"
+                  />
                   <span className="text-black font-medium">
                     Saya menyetujui Syarat dan Ketentuan diatas.
                   </span>
                 </label>
               </div>
-              <button type="submit" disabled={form.tnc === false} className="bg-secondary disabled:cursor-not-allowed disabled:opacity-40 text-white px-12 py-3 rounded-lg mt-4">
+              <button
+                type="submit"
+                disabled={form.tnc === false}
+                className="bg-secondary disabled:cursor-not-allowed disabled:opacity-40 text-white px-12 py-3 rounded-lg mt-4"
+              >
                 Kirim
               </button>
-              <p className="mt-1 text-red-500 italic text-sm" >{errorMessage}</p>
+              <p className="mt-1 text-red-500 italic text-sm">{errorMessage}</p>
             </div>
             {/* right content */}
             <div className="hidden md:block flex-auto w-32">
@@ -237,7 +263,9 @@ const Konsultasi = () => {
                 <span className="italic">
                   +6282253654721
                   <br />
-                  admin@buminusantarahijau.com
+                  <a href="mailto:buminusantarahijaupt@gmail.com">
+                    buminusantarahijaupt@gmail.com
+                  </a>
                 </span>
               </p>
             </div>

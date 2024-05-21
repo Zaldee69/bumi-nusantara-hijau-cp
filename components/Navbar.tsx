@@ -1,7 +1,7 @@
 import React from "react";
 import LinkTo from "../atoms/Link";
 import Links from "../molecules/Links";
-import Image from "next/image"
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -38,6 +38,9 @@ const Navbar = () => {
               <LinkTo title="Kontak Kami" href="/kontak" />
             </li>
             <li>
+              <LinkTo title="Portofolio" href="/portofolio" />
+            </li>
+            <li>
               <LinkTo title="AMDAL" href="/amdal" />
             </li>
             <li>
@@ -57,9 +60,18 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex gap-3 ml-5 items-center" >
-        <Image unoptimized={true} className="" alt="logo" src="/assets/images/logo.png" height="100" width="100" />
-        <a className="hidden md:block normal-case text-xl font-semibold">PT BUMI NUSANTARA HIJAU</a>
+        <div className="flex gap-3 ml-5 items-center">
+          <Image
+            unoptimized={true}
+            className=""
+            alt="logo"
+            src="/assets/images/logo.png"
+            height="100"
+            width="100"
+          />
+          <a className="hidden md:block normal-case text-xl font-semibold">
+            PT BUMI NUSANTARA HIJAU
+          </a>
         </div>
       </div>
       <div className="flex-none">

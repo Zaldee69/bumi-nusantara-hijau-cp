@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import About from '../components/About'
-import Advantages from '../components/Advantages'
-import Services from '../components/Services'
-import Partner from '../components/Partner'
-import { Templates } from '../templates/Templates'
+import Head from "next/head";
+import About from "../components/About";
+import Advantages from "../components/Advantages";
+import Services from "../components/Services";
+import Partner from "../components/Partner";
+import { Templates } from "../templates/Templates";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,12 +16,39 @@ export default function Home() {
         <link rel="icon" href="/assets/images/logo.png" />
       </Head>
       <Templates>
-      <main className="bg-[#F8F9FA]" >
-        <About/>
-        <Advantages/>
-        <Services/>
-        <Partner/>
-      </main>
-    </Templates>
+        <main className="bg-[#F8F9FA]">
+          <About />
+          <Advantages />
+          <Services />
+          <Partner />
+          <div className="flex justify-center items-center bg-white">
+            <Image
+              unoptimized={true}
+              alt="Pertamina Power"
+              className="flex-none mx-auto md:mx-0"
+              src="/assets/images/iso-1.png"
+              height={25}
+              width={150}
+            />
+            <Image
+              unoptimized={true}
+              alt="Pertamina Power"
+              className="flex-none mx-auto md:mx-0"
+              src="/assets/images/iso-2.webp"
+              height={25}
+              width={180}
+            />
+            <Image
+              unoptimized={true}
+              alt="Pertamina Power"
+              className=" mx-auto md:mx-0"
+              src="/assets/images/iso-3.png"
+              height={10}
+              width={200}
+            />
+          </div>
+        </main>
+      </Templates>
     </>
-  )}
+  );
+}

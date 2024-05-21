@@ -53,14 +53,19 @@ const Footer = () => {
       </div>
       <div>
         <span className="footer-title">Hubungi Kami</span>
-        <a className="">
+        <p className="">
           Jl. Flamboyan Raya Perumahan Taman Anggrek Setiabudi, <br />
           Blok Catelia No. 16 Kelurahan Tanjung Selamat, <br />
           Kecamatan Medan Tuntungan Kota Medan Provinsi Sumatera Utara. <br />
-          Phone : 061-8440747, 8466674 <br />
-          Fax : 061-8466674 <br />
-          E-Mail : admin@buminusantarahijau.com
-        </a>
+          E-Mail :{" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="mailto:ptbuminusantarahijaupt@gmail.com"
+          >
+            buminusantarahijaupt@gmail.com
+          </a>
+        </p>
       </div>
     </footer>
   );
