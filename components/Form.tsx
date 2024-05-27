@@ -1,51 +1,73 @@
-import React, {useState} from "react";
-import emailjs from '@emailjs/browser';
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 interface IForm {
-  name: string
-  phone: string | undefined
-  company: string
-  project: string
-  message: string
+  name: string;
+  phone: string | undefined;
+  company: string;
+  project: string;
+  message: string;
 }
 
 // template_vh73g0u
 
 const Form = () => {
-
   const [form, setForm] = useState<IForm>({
     name: "",
     phone: undefined,
     company: "",
     project: "",
-    message: ""
-  })
+    message: "",
+  });
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const {name, value} = e.target as typeof e.target
+  const onChangeHandler = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target as typeof e.target;
 
     setForm({
       ...form,
-      [name]: value
-    })
-  }
+      [name]: value,
+    });
+  };
 
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    emailjs.send("service_rqo9v1d", "template_b9ksjim", form as any , "tELoQHcg3n3RVYGPV" ).then((res) => {
-      setForm({
-        name: "",
-        phone: undefined,
-        company: "",
-        project: "",
-        message: ""
+    e.preventDefault();
+    emailjs
+      .send(
+        "service_rqo9v1d",
+        "template_b9ksjim",
+        form as any,
+        "tELoQHcg3n3RVYGPV"
+      )
+      .then((res) => {
+        setForm({
+          name: "",
+          phone: undefined,
+          company: "",
+          project: "",
+          message: "",
+        });
       })
-    }).catch((err) => console.log(err))
-  }
+      .catch((err) => console.log(err));
+  };
 
   return (
-    <form onSubmit={onSubmitHandler} className="form-control flex flex-col items-center gap-5 bg-primary py-12 px-10 mt-10 ">
-      <input value={form.name} type="text" name="name" onChange={onChangeHandler} placeholder="Nama" className="input w-full max-w-md" />
+    <form
+      onSubmit={onSubmitHandler}
+      className="form-control flex flex-col items-center gap-5 bg-primary py-12 px-10 mt-10 "
+    >
+      <h2 className="text-xl font-bold text-center text-white mb-3">
+        Hubungi Kami
+      </h2>
+      <input
+        value={form.name}
+        type="text"
+        name="name"
+        onChange={onChangeHandler}
+        placeholder="Nama"
+        className="input w-full max-w-md"
+      />
       <input
         name="company"
         onChange={onChangeHandler}
