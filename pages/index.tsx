@@ -17,7 +17,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="konsultasi lingkungan, AMDAL, studi kelayakan, pengelolaan limbah B3, perizinan lingkungan, konsultan lingkungan hidup, PT Bumi Nusantara Hijau"
+          content="konsultasi lingkungan, AMDAL, studi kelayakan, pengelolaan limbah B3, perizinan lingkungan, konsultan lingkungan hidup, PT Bumi Nusantara Hijau, konsultan amdal, konsultan lingkungan hidup, konsultan lingkungan, perusahaan konsultan lingkungan, konsultan lingkungan jakarta, konsultan lingkungan medan, konsultan amdal jakarta, konsultan amdal medan"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/images/logo.png" />
